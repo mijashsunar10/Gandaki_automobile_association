@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Map, Phone, Mail, ChevronDown, Menu, X } from "lucide-react";
+import { MapPin, Phone, Mail, ChevronDown, Menu, X } from "lucide-react";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -10,80 +10,81 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      {/* Top Bar */}
+      {/* TOP BAR (Logo + Contact Cards) */}
       <div className={styles.topBar}>
-        <div className={styles.logoSection}>
-          <Image
-            src="/logo/image.png"
-            alt="GAMA Logo"
-            width={65}
-            height={65}
-            className={styles.logoImage}
-            priority
-          />
-          <div className={styles.logoTextContainer}>
-            <h1 className={styles.logoTitle}>गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन</h1>
-            <p className={styles.logoSubtitle}>गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन</p>
-          </div>
-        </div>
+        <div className={styles.topBarInner}>
+          
+          <Link href="/" className={styles.logoSection}>
+            <Image
+              src="/logo/image.png"
+              alt="GAMA Logo"
+              width={75}
+              height={75}
+              className={styles.logoImage}
+              priority
+            />
+            <div className={styles.logoTextContainer}>
+              <h1 className={styles.logoTitle}>गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन</h1>
+              <p className={styles.logoSubtitle}>गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन</p>
+            </div>
+          </Link>
 
-        <div className={styles.contactInfoContainer}>
-          <div className={styles.contactItem}>
-            <div className={styles.iconWrapper}>
-              <Map size={18} strokeWidth={1.75} />
+          <div className={styles.contactCards}>
+            <div className={styles.contactCard}>
+              <MapPin size={20} className={styles.contactIcon} strokeWidth={2} />
+              <div className={styles.contactText}>
+                <span className={styles.contactLabel}>Location</span>
+                <span className={styles.contactValue}>पोखरा ८, नयाँबजार</span>
+              </div>
             </div>
-            <div className={styles.contactText}>
-              <span className={styles.contactTitle}>पोखरा ८, नयाँबजार</span>
-              <span className={styles.contactSubtitle}>गण्डकी, नेपाल</span>
+
+            <div className={styles.contactCard}>
+              <Phone size={20} className={styles.contactIcon} strokeWidth={2} />
+              <div className={styles.contactText}>
+                <span className={styles.contactLabel}>Call Us</span>
+                <span className={styles.contactValue}>061-577232</span>
+              </div>
+            </div>
+
+            <div className={styles.contactCard}>
+              <Mail size={20} className={styles.contactIcon} strokeWidth={2} />
+              <div className={styles.contactText}>
+                <span className={styles.contactLabel}>Mail Us At</span>
+                <span className={styles.contactValue}>gamapokhara@gmail.com</span>
+              </div>
             </div>
           </div>
 
-          <div className={styles.contactItem}>
-            <div className={styles.iconWrapper}>
-              <Phone size={18} strokeWidth={1.75} />
-            </div>
-            <div className={styles.contactText}>
-              <span className={styles.contactTitle}>061-577232</span>
-              <span className={styles.contactSubtitle}>सोम-शुक्र</span>
-            </div>
-          </div>
-
-          <div className={styles.contactItem}>
-            <div className={styles.iconWrapper}>
-              <Mail size={18} strokeWidth={1.75} />
-            </div>
-            <div className={styles.contactText}>
-              <span className={styles.contactTitle}>gamapokhara@gmail.com</span>
-              <span className={styles.contactSubtitle}>24सै घण्टा अनलाइन सहायता</span>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Navigation Bar */}
+      {/* BOTTOM NAV BAR */}
       <nav className={styles.navBar}>
-        <button
-          className={styles.mobileMenuBtn}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className={styles.navBarInner}>
+          
+          <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileNavLinks : ''}`}>
+            <li className={styles.navItem}><Link href="/" className={styles.navLink}>गृहपृष्ठ</Link></li>
+            <li className={styles.navItem}><Link href="/about" className={styles.navLink}>हाम्रो बारेमा</Link></li>
+            <li className={styles.navItem}><Link href="/services" className={styles.navLink}>सेवाहरु</Link></li>
+            <li className={styles.navItem}><Link href="/members" className={styles.navLink}>कार्यसमिति सदस्य</Link></li>
+            <li className={styles.navItem}><Link href="/programs" className={styles.navLink}>कार्यक्रमहरु</Link></li>
+            <li className={styles.navItem}>
+              <Link href="/messages" className={styles.navLink}>
+                सन्देश <ChevronDown size={14} strokeWidth={2.5} className={styles.dropdownIcon} />
+              </Link>
+            </li>
+            <li className={styles.navItem}><Link href="/certificate" className={styles.navLink}>दर्ता भएको प्रमाण पत्र</Link></li>
+          </ul>
 
-        <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileNavLinks : ''}`}>
-          <li className={styles.navItem}><Link href="/" className={styles.navLink}>गृहपृष्ठ</Link></li>
-          <li className={styles.navItem}><Link href="/about" className={styles.navLink}>हाम्रो बारेमा</Link></li>
-          <li className={styles.navItem}><Link href="/programs" className={styles.navLink}>कार्यक्रमहरु</Link></li>
-          <li className={styles.navItem}><Link href="/services" className={styles.navLink}>सेवाहरु</Link></li>
-          <li className={styles.navItem}><Link href="/members" className={styles.navLink}>कार्यसमिति सदस्य</Link></li>
-          <li className={styles.navItem}>
-            <Link href="/messages" className={styles.navLink}>
-              सन्देश <ChevronDown size={16} strokeWidth={2} className={styles.dropdownIcon} />
-            </Link>
-          </li>
-          <li className={styles.navItem}><Link href="/certificate" className={styles.navLink}>दर्ता भएको प्रमाण पत्र</Link></li>
-        </ul>
+          <button className={styles.ctaButton}>GET STARTED</button>
 
-        <button className={styles.navButton}>GET STARTED</button>
+          <button
+            className={styles.mobileMenuBtn}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </nav>
     </header>
   );
