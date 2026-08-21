@@ -16,8 +16,8 @@ const Header = () => {
           <Image
             src="/logo/image.png"
             alt="GAMA Logo"
-            width={70}
-            height={70}
+            width={65}
+            height={65}
             className={styles.logoImage}
             priority
           />
@@ -30,7 +30,7 @@ const Header = () => {
         <div className={styles.contactInfoContainer}>
           <div className={styles.contactItem}>
             <div className={styles.iconWrapper}>
-              <Map size={20} />
+              <Map size={18} strokeWidth={1.75} />
             </div>
             <div className={styles.contactText}>
               <span className={styles.contactTitle}>पोखरा ८, नयाँबजार</span>
@@ -40,7 +40,7 @@ const Header = () => {
 
           <div className={styles.contactItem}>
             <div className={styles.iconWrapper}>
-              <Phone size={20} />
+              <Phone size={18} strokeWidth={1.75} />
             </div>
             <div className={styles.contactText}>
               <span className={styles.contactTitle}>061-577232</span>
@@ -50,7 +50,7 @@ const Header = () => {
 
           <div className={styles.contactItem}>
             <div className={styles.iconWrapper}>
-              <Mail size={20} />
+              <Mail size={18} strokeWidth={1.75} />
             </div>
             <div className={styles.contactText}>
               <span className={styles.contactTitle}>gamapokhara@gmail.com</span>
@@ -70,29 +70,17 @@ const Header = () => {
         </button>
 
         <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileNavLinks : ''}`}>
-          <li className={styles.navItem}>
-            <Link href="/" className={styles.navLink}>गृहपृष्ठ</Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/about" className={styles.navLink}>हाम्रो बारेमा</Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/programs" className={styles.navLink}>कार्यक्रमहरु</Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/services" className={styles.navLink}>सेवाहरु</Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/members" className={styles.navLink}>कार्यसमिति सदस्य</Link>
-          </li>
+          <li className={styles.navItem}><Link href="/" className={styles.navLink}>गृहपृष्ठ</Link></li>
+          <li className={styles.navItem}><Link href="/about" className={styles.navLink}>हाम्रो बारेमा</Link></li>
+          <li className={styles.navItem}><Link href="/programs" className={styles.navLink}>कार्यक्रमहरु</Link></li>
+          <li className={styles.navItem}><Link href="/services" className={styles.navLink}>सेवाहरु</Link></li>
+          <li className={styles.navItem}><Link href="/members" className={styles.navLink}>कार्यसमिति सदस्य</Link></li>
           <li className={styles.navItem}>
             <Link href="/messages" className={styles.navLink}>
-              सन्देश <ChevronDown className={styles.dropdownIcon} />
+              सन्देश <ChevronDown size={16} strokeWidth={2} className={styles.dropdownIcon} />
             </Link>
           </li>
-          <li className={styles.navItem}>
-            <Link href="/certificate" className={styles.navLink}>दर्ता भएको प्रमाण पत्र</Link>
-          </li>
+          <li className={styles.navItem}><Link href="/certificate" className={styles.navLink}>दर्ता भएको प्रमाण पत्र</Link></li>
         </ul>
 
         <button className={styles.navButton}>GET STARTED</button>

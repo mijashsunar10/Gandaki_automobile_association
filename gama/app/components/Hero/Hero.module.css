@@ -1,0 +1,324 @@
+/* =========================================================
+   HERO
+========================================================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 120px); /* Adjusted for header height */
+  min-height: 650px;
+  overflow: hidden;
+  background: #071522;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+.bg {
+  position: absolute;
+  inset: -4%;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  transition: background-image 1.3s ease, transform 7s ease;
+}
+
+.moving {
+  transform: scale(1.10);
+}
+
+/* =========================================================
+   UNIFORM DARK OVERLAY
+========================================================= */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(3, 11, 19, 0.62);
+  pointer-events: none;
+}
+
+/* =========================================================
+   BLUE LIGHT
+========================================================= */
+.blueLight {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  left: -300px;
+  top: 15%;
+  border-radius: 50%;
+  background: rgba(30, 136, 229, 0.13);
+  filter: blur(100px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* =========================================================
+   RED LIGHT
+========================================================= */
+.redLight {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: -250px;
+  bottom: 5%;
+  border-radius: 50%;
+  background: rgba(229, 57, 53, 0.11);
+  filter: blur(100px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* =========================================================
+   CENTER CONTENT
+========================================================= */
+.center {
+  position: relative;
+  z-index: 5;
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+  margin-top: -15px;
+}
+
+/* =========================================================
+   ESTABLISHED
+========================================================= */
+.established {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.established span {
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, #1e88e5, #e53935);
+}
+
+/* =========================================================
+   LOCATION / BRAND
+========================================================= */
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-bottom: 14px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.location span:first-child {
+  color: #5caeff;
+}
+
+.location i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #e53935;
+  display: inline-block;
+}
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+.center h1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1.35;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-shadow: 0 8px 35px rgba(0, 0, 0, 0.60), 0 2px 10px rgba(0, 0, 0, 0.30);
+}
+
+.center h1 strong {
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffffff 0%, #dceeff 45%, #55a9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+.quote {
+  margin: 25px auto 30px;
+  max-width: 720px;
+  font-size: 24px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.84);
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.50);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 155px;
+  padding: 14px 22px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  color: #fff;
+  background: linear-gradient(110deg, #e53935, #ef4b48);
+  box-shadow: 0 10px 30px rgba(229, 57, 53, 0.25);
+}
+
+.btnPrimary:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 38px rgba(229, 57, 53, 0.40);
+}
+
+.iconRight {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimary:hover .iconRight {
+  transform: translateX(4px);
+}
+
+.btnSecondary {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.btnSecondary:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  background: rgba(30, 136, 229, 0.20);
+  border-color: #4299ed;
+}
+
+/* =========================================================
+   SLIDE INDICATOR
+========================================================= */
+.sliderIndicator {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: 35px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #1e88e5, #e53935);
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+.scroll {
+  position: absolute;
+  z-index: 6;
+  right: 35px;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.scroll div {
+  width: 1px;
+  height: 30px;
+  background: linear-gradient(to bottom, #1e88e5, transparent);
+}
+
+/* =========================================================
+   MEDIA QUERIES
+========================================================= */
+@media (min-width: 1500px) {
+  .center h1 { font-size: 72px; }
+  .quote { font-size: 18px; }
+}
+
+@media (max-width: 900px) {
+  .hero { height: calc(100vh - 70px); }
+  .center { width: 92%; }
+  .center h1 { font-size: clamp(36px, 6.5vw, 56px); line-height: 1.15; }
+}
+
+@media (max-width: 600px) {
+  .hero { min-height: 620px; }
+  .center { width: 92%; margin-top: -20px; }
+  .overlay { background: rgba(3, 11, 19, 0.64); }
+  .established { font-size: 9px; letter-spacing: 1.5px; gap: 9px; margin-bottom: 15px; }
+  .established span { width: 20px; }
+  .location { font-size: 8px; letter-spacing: 2.5px; margin-bottom: 12px; }
+  .center h1 { font-size: clamp(29px, 8vw, 40px); line-height: 1.16; letter-spacing: -1px; }
+  .quote { font-size: 12px; margin: 18px auto 22px; }
+  .buttons { gap: 8px; }
+  .btn { min-width: 135px; padding: 11px 13px; font-size: 10px; }
+  .sliderIndicator { bottom: 22px; }
+  .line { width: 65px; }
+  .scroll { display: none; }
+}
+
+@media (max-width: 380px) {
+  .center h1 { font-size: 29px; line-height: 1.16; }
+  .quote { font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg, .btn { transition: none; }
+}
