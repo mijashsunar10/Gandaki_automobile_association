@@ -1,0 +1,238 @@
+.servicesSection {
+    width: 100%;
+    padding: 70px 60px 90px;
+    background: #f5f3ef;
+}
+
+.servicesContainer {
+    width: 100%;
+    max-width: 1545px;
+    margin: 0 auto;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #003b78;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 3px;
+    height: 17px;
+    background: #003b78;
+    display: inline-block;
+}
+
+.sectionTitle {
+    color: #111111;
+    font-size: clamp(34px, 3vw, 48px);
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 44px;
+    align-items: stretch;
+}
+
+.serviceCard {
+    position: relative;
+    min-height: 575px;
+    background: #ffffff;
+    border: 1px solid #1c1c1c;
+    border-radius: 30px 30px 25px 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 0 #161616;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 0 #161616;
+}
+
+.cardTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 165px;
+    background: linear-gradient(135deg, #f7f7f7 0%, #f7f7f7 42%, #e1f0ff 100%);
+    z-index: 0;
+}
+
+.cardTop::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 160px;
+    background: #f7f7f7;
+    border-bottom-right-radius: 90px;
+}
+
+.logoWrapper {
+    position: relative;
+    z-index: 3;
+    width: 88px;
+    height: 88px;
+    margin-top: 28px;
+    margin-left: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoWrapper img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    display: block;
+}
+
+.cardContent {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 34px 46px 30px;
+    padding-top: 42px;
+}
+
+.serviceCategory {
+    color: #111111;
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.serviceTitle {
+    color: #111111;
+    font-size: 27px;
+    line-height: 1.35;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 25px;
+}
+
+.serviceDescription {
+    color: #5c5c5c;
+    font-size: 18px;
+    line-height: 1.65;
+    font-weight: 400;
+    max-width: 310px;
+}
+
+.cardFooter {
+    margin-top: auto;
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footerLine {
+    height: 1px;
+    background: #eeeeee;
+    flex: 1;
+}
+
+@media (max-width: 1400px) {
+    .servicesSection {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .servicesGrid {
+        gap: 30px;
+    }
+    .cardContent {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .logoWrapper {
+        margin-left: 35px;
+    }
+    .serviceTitle {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .serviceCard {
+        min-height: 530px;
+    }
+}
+
+@media (max-width: 700px) {
+    .servicesSection {
+        padding: 55px 20px 70px;
+    }
+    .sectionHeader {
+        margin-bottom: 40px;
+    }
+    .eyebrow {
+        font-size: 15px;
+    }
+    .sectionTitle {
+        font-size: 32px;
+    }
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .serviceCard {
+        min-height: 520px;
+    }
+    .cardContent {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .logoWrapper {
+        margin-left: 32px;
+    }
+    .serviceTitle {
+        font-size: 26px;
+    }
+    .serviceDescription {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    .servicesSection {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .serviceCard {
+        min-height: 500px;
+    }
+    .cardContent {
+        padding-left: 27px;
+        padding-right: 27px;
+    }
+    .logoWrapper {
+        margin-left: 27px;
+    }
+}
