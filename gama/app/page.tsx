@@ -3,6 +3,7 @@ import AboutSection from "./components/AboutSection/AboutSection";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 import ChairmanSection from "./components/ChairmanSection/ChairmanSection";
 import BulletinSection from "./components/BulletinSection/BulletinSection";
+import MembersSection from "./components/MembersSection/MembersSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <AboutSection />
       <ChairmanSection />
       <BulletinSection />
+      <MembersSection isHomepage={true} />
       <ServicesSection />
     </>
   );
