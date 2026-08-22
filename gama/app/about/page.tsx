@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Target, Lightbulb, Users, CheckCircle2 } from 'lucide-react';
 import styles from './page.module.css';
+import BulletinSection from '../components/BulletinSection/BulletinSection';
 
 export default function AboutPage() {
   return (
@@ -79,6 +80,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <BulletinSection />
     </main>
   );
 }
