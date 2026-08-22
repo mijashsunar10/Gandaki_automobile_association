@@ -1,0 +1,271 @@
+/* =========================================
+   HOMEPAGE CHAIRMAN SECTION
+========================================= */
+.homeChairmanSection {
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f9fe 0%, #ffffff 55%, #f3f8fd 100%);
+  font-family: "Noto Sans Devanagari", "Nirmala UI", Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+.homeChairmanContainer {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  align-items: center;
+  gap: 70px;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+.homeChairmanImage {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+.image {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+  transition: transform .35s ease;
+}
+
+.homeChairmanImage:hover .image {
+  transform: translateY(-5px);
+}
+
+/* Decorative border */
+.homeChairmanImage::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 12px;
+  top: 12px;
+  border: 3px solid #2565AF;
+  border-radius: 20px;
+}
+
+/* Blue corner */
+.homeChairmanAccent {
+  position: absolute;
+  z-index: 3;
+  width: 65px;
+  height: 65px;
+  left: -15px;
+  top: -15px;
+  background: #2565AF;
+  border-radius: 15px;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+.homeChairmanContent {
+  position: relative;
+}
+
+.homeChairmanLabel {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #2565AF;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.homeChairmanContent h2 {
+  margin: 0;
+  color: #173b63;
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.homeChairmanContent h4 {
+  margin: 8px 0 18px;
+  color: #6b7884;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* =========================================
+   LINE
+========================================= */
+.homeChairmanLine {
+  width: 60px;
+  height: 4px;
+  margin-bottom: 25px;
+  background: #2565AF;
+  border-radius: 10px;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+.homeChairmanContent p {
+  margin: 0 0 17px;
+  color: #4c5964;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+.homeChairmanQuote {
+  margin: 25px 0;
+  padding: 18px 22px;
+  border-left: 4px solid #2565AF;
+  background: rgba(37, 101, 175, 0.06);
+  color: #234566;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
+  border-radius: 0 10px 10px 0;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+.homeChairmanButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  padding: 12px 22px;
+  background: #2565AF;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+.homeChairmanButton span {
+  font-size: 20px;
+  line-height: 1;
+  transition: transform .3s ease;
+}
+
+.homeChairmanButton:hover {
+  background: #1b4f8c;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 101, 175, 0.25);
+}
+
+.homeChairmanButton:hover span {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+@media (max-width: 900px) {
+  .homeChairmanContainer {
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 45px;
+  }
+  .homeChairmanImage {
+    max-width: 270px;
+  }
+  .image {
+    height: 350px;
+  }
+  .homeChairmanContent p {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+@media (max-width: 700px) {
+  .homeChairmanSection {
+    padding: 60px 18px;
+  }
+  .homeChairmanContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .homeChairmanImage {
+    width: 260px;
+    max-width: 260px;
+  }
+  .image {
+    height: 330px;
+  }
+  .homeChairmanContent {
+    width: 100%;
+  }
+  .homeChairmanLabel {
+    font-size: 14px;
+  }
+  .homeChairmanContent h2 {
+    font-size: 31px;
+  }
+  .homeChairmanContent h4 {
+    font-size: 15px;
+  }
+  .homeChairmanLine {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .homeChairmanContent p {
+    font-size: 14px;
+    line-height: 1.85;
+    text-align: left;
+  }
+  .homeChairmanQuote {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+@media (max-width: 420px) {
+  .homeChairmanSection {
+    padding: 50px 15px;
+  }
+  .homeChairmanImage {
+    width: 230px;
+    max-width: 230px;
+  }
+  .image {
+    height: 290px;
+  }
+  .homeChairmanContent h2 {
+    font-size: 28px;
+  }
+  .homeChairmanContent h4 {
+    font-size: 14px;
+  }
+  .homeChairmanButton {
+    padding: 11px 19px;
+    font-size: 14px;
+  }
+}

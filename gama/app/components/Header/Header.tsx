@@ -68,10 +68,17 @@ const Header = () => {
             <li className={styles.navItem}><Link href="/services" className={styles.navLink}>सेवाहरु</Link></li>
             <li className={styles.navItem}><Link href="/members" className={styles.navLink}>कार्यसमिति सदस्य</Link></li>
             <li className={styles.navItem}><Link href="/programs" className={styles.navLink}>कार्यक्रमहरु</Link></li>
-            <li className={styles.navItem}>
-              <Link href="/messages" className={styles.navLink}>
+            <li className={`${styles.navItem} ${styles.dropdownContainer}`}>
+              <span className={styles.navLink} style={{cursor: 'pointer'}}>
                 सन्देश <ChevronDown size={14} strokeWidth={2.5} className={styles.dropdownIcon} />
-              </Link>
+              </span>
+              <ul className={styles.dropdownMenu}>
+                <li>
+                  <Link href="/chairman-message" className={styles.dropdownItem}>
+                    अध्यक्षको सन्देश
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className={styles.navItem}><Link href="/certificate" className={styles.navLink}>दर्ता भएको प्रमाण पत्र</Link></li>
           </ul>
