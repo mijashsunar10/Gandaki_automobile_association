@@ -103,8 +103,16 @@
 }
 
 /* --- Bottom Nav Bar --- */
+.stickyNavWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
 .navBar {
   background: #1e3a8a; /* Deep blue solid background */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .navBarInner {

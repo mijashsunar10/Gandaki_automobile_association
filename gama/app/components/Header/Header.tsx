@@ -9,10 +9,11 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className={styles.header}>
-      {/* TOP BAR (Logo + Contact Cards) */}
-      <div className={styles.topBar}>
-        <div className={styles.topBarInner}>
+    <>
+      <header className={styles.header}>
+        {/* TOP BAR (Logo + Contact Cards) */}
+        <div className={styles.topBar}>
+          <div className={styles.topBarInner}>
           
           <Link href="/" className={styles.logoSection}>
             <Image
@@ -54,12 +55,13 @@ const Header = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
+      </header>
 
       {/* BOTTOM NAV BAR */}
-      <nav className={styles.navBar}>
+      <div className={styles.stickyNavWrapper}>
+        <nav className={styles.navBar}>
         <div className={styles.navBarInner}>
           
           <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileNavLinks : ''}`}>
@@ -93,7 +95,8 @@ const Header = () => {
           </button>
         </div>
       </nav>
-    </header>
+      </div>
+    </>
   );
 };
 
