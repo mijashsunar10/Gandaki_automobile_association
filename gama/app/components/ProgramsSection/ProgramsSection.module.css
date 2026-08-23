@@ -1,0 +1,286 @@
+/* =========================================================
+   ROOT
+========================================================= */
+.gamaProgramsSection {
+  --blue: #1e3a8a;
+  --blue-light: #3b82f6;
+  --red: #e53935;
+  --red-dark: #b91c1c;
+  --dark: #0f172a;
+  --text: #334155;
+  --muted: #64748b;
+  position: relative;
+  width: 100%;
+  padding: 90px 20px;
+  background-color: #f8fafc;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+.gamaBgShape {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.gamaBgBlue {
+  width: 450px;
+  height: 450px;
+  left: -200px;
+  top: -100px;
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.gamaBgRed {
+  width: 350px;
+  height: 350px;
+  right: -150px;
+  bottom: 100px;
+  background: rgba(229, 57, 53, 0.05);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+.gamaProgramsContainer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+.gamaProgramsHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.gamaSectionTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.gamaSectionTag span {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--red));
+}
+
+.gamaProgramsHeader h2 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  font-weight: 900;
+  color: var(--dark);
+}
+
+.gamaProgramsHeader h2 strong {
+  background: linear-gradient(90deg, var(--blue), var(--red));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gamaProgramsHeader p {
+  margin: 18px auto 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+.gamaProgramsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+.gamaProgramCard {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.gamaProgramCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+  border-color: #e2e8f0;
+}
+
+/* IMAGE */
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gamaProgramCard:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardBadge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--red);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(229, 57, 53, 0.3);
+}
+
+/* CONTENT */
+.cardContent {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.metaItem i {
+  color: var(--blue);
+}
+
+.cardTitle {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+.cardDesc {
+  margin: 0 0 25px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* BUTTON */
+.cardButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  background: #f8fafc;
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cardButton i {
+  font-size: 11px;
+  transition: transform 0.3s ease;
+}
+
+.gamaProgramCard:hover .cardButton {
+  background: var(--blue);
+  color: white;
+}
+
+.gamaProgramCard:hover .cardButton i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   VIEW ALL BUTTON (For Homepage)
+========================================================= */
+.viewAllContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.viewAllButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px;
+  background: linear-gradient(110deg, var(--red), var(--red-dark));
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(229, 57, 53, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.viewAllButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(229, 57, 53, 0.35);
+  color: white;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media(max-width: 600px) {
+  .gamaProgramsSection { padding: 60px 15px; }
+  .gamaProgramsHeader { margin-bottom: 35px; }
+  .gamaSectionTag { font-size: 9px; }
+  .gamaProgramsHeader h2 { font-size: 28px; }
+  .gamaProgramsGrid { gap: 20px; }
+  .cardImageWrapper { height: 180px; }
+  .cardContent { padding: 20px; }
+  .cardTitle { font-size: 18px; }
+}
