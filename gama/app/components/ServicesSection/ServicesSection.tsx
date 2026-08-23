@@ -20,7 +20,7 @@ const ServicesSection = () => {
                         <div className={styles.cardTop}></div>
                         <div className={styles.logoWrapper}>
                             <Image
-                                src="https://gamapokhara.org.np/wp-content/uploads/2026/01/cropped-cropped-gamalogo.jpg"
+                                src="/logo/image.webp"
                                 alt="गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन"
                                 width={72}
                                 height={72}
@@ -42,7 +42,7 @@ const ServicesSection = () => {
                         <div className={styles.cardTop}></div>
                         <div className={styles.logoWrapper}>
                             <Image
-                                src="https://gamapokhara.org.np/wp-content/uploads/2026/01/cropped-cropped-gamalogo.jpg"
+                                src="/logo/image.webp"
                                 alt="गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन"
                                 width={72}
                                 height={72}
@@ -64,7 +64,7 @@ const ServicesSection = () => {
                         <div className={styles.cardTop}></div>
                         <div className={styles.logoWrapper}>
                             <Image
-                                src="https://gamapokhara.org.np/wp-content/uploads/2026/01/cropped-cropped-gamalogo.jpg"
+                                src="/logo/image.webp"
                                 alt="गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन"
                                 width={72}
                                 height={72}
@@ -86,7 +86,7 @@ const ServicesSection = () => {
                         <div className={styles.cardTop}></div>
                         <div className={styles.logoWrapper}>
                             <Image
-                                src="https://gamapokhara.org.np/wp-content/uploads/2026/01/cropped-cropped-gamalogo.jpg"
+                                src="/logo/image.webp"
                                 alt="गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन"
                                 width={72}
                                 height={72}

@@ -11,7 +11,7 @@ const ChairmanSection = () => {
         <div className={styles.homeChairmanImage}>
           <div className={styles.homeChairmanAccent}></div>
           <Image
-            src="https://gamapokhara.org.np/wp-content/uploads/2026/08/businessman-with-smiling-face-vector_1190219-37918.avif"
+            src="/person.png"
             alt="अध्यक्ष - विष्णु प्रसाद अधिकारी"
             width={330}
             height={400}
@@ -22,7 +22,7 @@ const ChairmanSection = () => {
         {/* Right: Content */}
         <div className={styles.homeChairmanContent}>
           <span className={styles.homeChairmanLabel}>अध्यक्षको भनाई</span>
-          <h2>विष्णु प्रसाद अधिकारी</h2>
+          <h2>श्री विष्णु प्रसाद अधिकारी</h2>
           <h4>अध्यक्ष, गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन</h4>
           <div className={styles.homeChairmanLine}></div>
 

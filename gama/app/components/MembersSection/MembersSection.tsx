@@ -17,28 +17,50 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
   };
 
   const executiveMembers = [
-    { id: '02', role: 'उपाध्यक्ष', name: 'सदस्यको नाम', type: 'केन्द्रीय कार्यसमिति' },
-    { id: '03', role: 'महासचिव', name: 'सदस्यको नाम', type: 'केन्द्रीय कार्यसमिति' },
-    { id: '04', role: 'सचिव', name: 'सदस्यको नाम', type: 'केन्द्रीय कार्यसमिति' },
-    { id: '05', role: 'कोषाध्यक्ष', name: 'सदस्यको नाम', type: 'केन्द्रीय कार्यसमिति' },
+    { id: '02', role: 'निवर्तमान अध्यक्ष', name: 'श्री सन्तोष कुमार मिश्र', phone: 'मो: ९८४६०२२६०८' },
+    { id: '03', role: 'वरिष्ठ उपाध्यक्ष', name: 'श्री नवराज सुनार', phone: 'मो: ९८०४१०८२७४' },
+    { id: '04', role: 'उपाध्यक्ष', name: 'श्री जगन्नाथ गर्तौला', phone: 'मो: ९८४६०३५४४४' },
+    { id: '05', role: 'महासचिव', name: 'श्री विजेन्द्र चौधरी', phone: 'मो: ९८४६०२९०५७' },
+    { id: '06', role: 'कोषाध्यक्ष', name: 'श्री निहाल अन्सारी', phone: 'मो: ९८४६४८०८४४' },
+    { id: '07', role: 'सचिव', name: 'श्री सन्तोष कुमार राउत कुर्मी', phone: 'मो: ९८०६५५१५३७' },
+    { id: '08', role: 'सह-कोषाध्यक्ष', name: 'श्री प्रकाश गिरी', phone: 'मो: ९८४६०५७१२४' },
+    { id: '09', role: 'कार्यसमिति सदस्य', name: 'श्री एक बहादुर बानियाँ', phone: 'मो: ९८४६०६४२३४' },
+    { id: '10', role: 'कार्यसमिति सदस्य', name: 'श्री विन्दु पावे', phone: 'मो: ९८१६११३४४३' },
+    { id: '11', role: 'कार्यसमिति सदस्य', name: 'श्री उमेश साह कानु', phone: 'मो: ९८४६०५१६७१' },
+    { id: '12', role: 'कार्यसमिति सदस्य', name: 'श्री डिल बहादुर तुलाधर', phone: 'मो: ९८४६०३३४७१' },
+    { id: '13', role: 'कार्यसमिति सदस्य', name: 'श्री गंगा बहादुर कुँवर क्षेत्री', phone: 'मो: ९८०४४६३४२३' },
+    { id: '14', role: 'कार्यसमिति सदस्य', name: 'श्री निमसेन विश्वकर्मा', phone: 'मो: ९८०२८०११४१' },
+    { id: '15', role: 'मनोनीत सदस्य', name: 'श्री सोमबहादुर पुलामी राई', phone: 'मो: ९८४६०८१०४३' },
+    { id: '16', role: 'मनोनीत सदस्य', name: 'श्री सञ्जय तिमिल्सिना', phone: 'मो: ९८४६००२६२३' },
   ];
 
   const officeBearers = [
-    { id: '01', role: 'उपाध्यक्ष', name: 'सदस्यको नाम', type: 'केन्द्रीय पदाधिकारी' },
-    { id: '02', role: 'महासचिव', name: 'सदस्यको नाम', type: 'केन्द्रीय पदाधिकारी' },
-    { id: '03', role: 'सचिव', name: 'सदस्यको नाम', type: 'केन्द्रीय पदाधिकारी' },
+    { id: '02', role: 'निवर्तमान अध्यक्ष', name: 'श्री सन्तोष कुमार मिश्र', phone: 'मो: ९८४६०२२६०८' },
+    { id: '03', role: 'वरिष्ठ उपाध्यक्ष', name: 'श्री नवराज सुनार', phone: 'मो: ९८०४१०८२७४' },
+    { id: '04', role: 'उपाध्यक्ष', name: 'श्री जगन्नाथ गर्तौला', phone: 'मो: ९८४६०३५४४४' },
+    { id: '05', role: 'महासचिव', name: 'श्री विजेन्द्र चौधरी', phone: 'मो: ९८४६०२९०५७' },
+    { id: '06', role: 'कोषाध्यक्ष', name: 'श्री निहाल अन्सारी', phone: 'मो: ९८४६४८०८४४' },
+    { id: '07', role: 'सचिव', name: 'श्री सन्तोष कुमार राउत कुर्मी', phone: 'मो: ९८०६५५१५३७' },
+    { id: '08', role: 'सह-कोषाध्यक्ष', name: 'श्री प्रकाश गिरी', phone: 'मो: ९८४६०५७१२४' },
   ];
 
   const advisors = [
-    { id: '01', role: 'प्रमुख सल्लाहकार', name: 'सल्लाहकारको नाम', type: 'सल्लाहकार समिति' },
-    { id: '02', role: 'सल्लाहकार', name: 'सल्लाहकारको नाम', type: 'सल्लाहकार समिति' },
+    { id: '01', role: 'सल्लाहकार', name: 'श्री सानुमान जलारी', phone: 'मो: ९८४६०२६४२३' },
+    { id: '02', role: 'कानुनी सल्लाहकार', name: 'ब. अधिवक्ता माधवराज बाँस्तोला', phone: 'मो: ९८४६०२२३६३' },
+    { id: '03', role: 'प्रेस सल्लाहकार', name: 'श्री कृष्ण बहादुर थापा', phone: 'मो: ९८४६०३३६६३' },
+    { id: '04', role: 'स्वास्थ्य सल्लाहकार', name: 'डा. रविन्द्र प्रसाद श्रेष्ठ', phone: 'मो: ९८४६०२०४४०' },
+    { id: '05', role: 'सल्लाहकार', name: 'श्री पवन कुमार प्रजापती', phone: 'मो: ९८४६०२०४४४' },
   ];
 
   const generalMembers = [
-    { id: '01', role: 'सदस्य', name: 'सदस्यको नाम', type: 'केन्द्रीय सदस्य' },
-    { id: '02', role: 'सदस्य', name: 'सदस्यको नाम', type: 'केन्द्रीय सदस्य' },
-    { id: '03', role: 'सदस्य', name: 'सदस्यको नाम', type: 'केन्द्रीय सदस्य' },
-    { id: '04', role: 'सदस्य', name: 'सदस्यको नाम', type: 'केन्द्रीय सदस्य' },
+    { id: '01', role: 'कार्यसमिति सदस्य', name: 'श्री एक बहादुर बानियाँ', phone: 'मो: ९८४६०६४२३४' },
+    { id: '02', role: 'कार्यसमिति सदस्य', name: 'श्री विन्दु पावे', phone: 'मो: ९८१६११३४४३' },
+    { id: '03', role: 'कार्यसमिति सदस्य', name: 'श्री उमेश साह कानु', phone: 'मो: ९८४६०५१६७१' },
+    { id: '04', role: 'कार्यसमिति सदस्य', name: 'श्री डिल बहादुर तुलाधर', phone: 'मो: ९८४६०३३४७१' },
+    { id: '05', role: 'कार्यसमिति सदस्य', name: 'श्री गंगा बहादुर कुँवर क्षेत्री', phone: 'मो: ९८०४४६३४२३' },
+    { id: '06', role: 'कार्यसमिति सदस्य', name: 'श्री निमसेन विश्वकर्मा', phone: 'मो: ९८०२८०११४१' },
+    { id: '07', role: 'मनोनीत सदस्य', name: 'श्री सोमबहादुर पुलामी राई', phone: 'मो: ९८४६०८१०४३' },
+    { id: '08', role: 'मनोनीत सदस्य', name: 'श्री सञ्जय तिमिल्सिना', phone: 'मो: ९८४६००२६२३' },
   ];
 
   // If on homepage, show 4 grid members without the large president block
@@ -117,7 +139,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                   <div className={styles.gamaPresidentImage}>
                     <div className={styles.gamaImageRing}></div>
                     <Image
-                      src="https://gamapokhara.org.np/wp-content/uploads/2026/08/businessman-with-smiling-face-vector_1190219-37918.avif"
+                      src="/person.png"
                       alt="अध्यक्ष"
                       width={205}
                       height={205}
@@ -131,7 +153,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
 
                   <div className={styles.gamaPresidentInfo}>
                     <span className={styles.gamaSmallLabel}>केन्द्रीय कार्यसमिति</span>
-                    <h2>अध्यक्ष</h2>
+                    <h2>श्री विष्णु प्रसाद अधिकारी</h2>
                     <div className={styles.gamaPresidentLine}></div>
                     <p>
                       संस्थाको नेतृत्व गर्दै संगठनको उद्देश्य,
@@ -140,12 +162,12 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                     </p>
                     <div className={styles.gamaProfileMeta}>
                       <span>
-                        <i className="fa-solid fa-building"></i>
-                        केन्द्रीय कार्यसमिति
+                        <i className="fa-solid fa-phone"></i>
+                        मो: ९८५६०१४८७२
                       </span>
                       <span>
                         <i className="fa-solid fa-location-dot"></i>
-                        नेपाल
+                        पोखरा
                       </span>
                     </div>
                   </div>
@@ -158,7 +180,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                     <article className={styles.gamaMemberCard} key={index}>
                       <div className={styles.gamaMemberImage}>
                         <Image
-                          src="https://gamapokhara.org.np/wp-content/uploads/2026/08/businessman-with-smiling-face-vector_1190219-37918.avif"
+                          src="/person.png"
                           alt="कार्यसमिति सदस्य"
                           width={205}
                           height={205}
@@ -169,7 +191,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                       <div className={styles.gamaMemberInfo}>
                         <span>{member.role}</span>
                         <h3>{member.name}</h3>
-                        <p>{member.type}</p>
+                        <p>{member.phone}</p>
                       </div>
                     </article>
                   ))}
@@ -192,7 +214,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                     <article className={styles.gamaMemberCard} key={index}>
                       <div className={styles.gamaMemberImage}>
                         <Image
-                          src="https://gamapokhara.org.np/wp-content/uploads/2026/08/businessman-with-smiling-face-vector_1190219-37918.avif"
+                          src="/person.png"
                           alt="पदाधिकारी"
                           width={205}
                           height={205}
@@ -203,7 +225,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                       <div className={styles.gamaMemberInfo}>
                         <span>{member.role}</span>
                         <h3>{member.name}</h3>
-                        <p>{member.type}</p>
+                        <p>{member.phone}</p>
                       </div>
                     </article>
                   ))}
@@ -226,7 +248,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                     <article className={styles.gamaMemberCard} key={index}>
                       <div className={styles.gamaMemberImage}>
                         <Image
-                          src="https://gamapokhara.org.np/wp-content/uploads/2026/08/businessman-with-smiling-face-vector_1190219-37918.avif"
+                          src="/person.png"
                           alt="सल्लाहकार"
                           width={205}
                           height={205}
@@ -237,7 +259,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                       <div className={styles.gamaMemberInfo}>
                         <span>{member.role}</span>
                         <h3>{member.name}</h3>
-                        <p>{member.type}</p>
+                        <p>{member.phone}</p>
                       </div>
                     </article>
                   ))}
@@ -260,7 +282,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                     <article className={styles.gamaMemberCard} key={index}>
                       <div className={styles.gamaMemberImage}>
                         <Image
-                          src="https://gamapokhara.org.np/wp-content/uploads/2026/08/businessman-with-smiling-face-vector_1190219-37918.avif"
+                          src="/person.png"
                           alt="सदस्य"
                           width={205}
                           height={205}
@@ -271,7 +293,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
                       <div className={styles.gamaMemberInfo}>
                         <span>{member.role}</span>
                         <h3>{member.name}</h3>
-                        <p>{member.type}</p>
+                        <p>{member.phone}</p>
                       </div>
                     </article>
                   ))}
