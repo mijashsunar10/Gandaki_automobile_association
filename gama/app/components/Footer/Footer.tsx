@@ -35,10 +35,8 @@ const Footer = () => {
               गण्डकी अटो मेकानिकल वर्क्स एसोसिएसन (GAMA) अटोमोबाइल क्षेत्रको विकास, व्यवसायीहरूको हकहित र दक्ष जनशक्ति उत्पादनमा समर्पित आधिकारिक संस्था हो।
             </p>
             <div className={styles.socialLinks}>
-              <a href="#" className={styles.socialIcon}><i className="fa-brands fa-facebook-f"></i></a>
-              <a href="#" className={styles.socialIcon}><i className="fa-brands fa-youtube"></i></a>
-              <a href="#" className={styles.socialIcon}><i className="fa-brands fa-twitter"></i></a>
-              <a href="#" className={styles.socialIcon}><i className="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61593467009034" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><i className="fa-brands fa-facebook-f"></i></a>
+              <a href="https://wa.me/9779856082230" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><i className="fa-brands fa-whatsapp"></i></a>
             </div>
           </div>
 

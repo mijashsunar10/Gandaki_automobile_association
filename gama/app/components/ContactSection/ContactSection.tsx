@@ -75,9 +75,8 @@ const ContactSection = () => {
           </div>
 
           <div className={styles.socialLinks}>
-            <a href="#" className={styles.socialIcon}><i className="fa-brands fa-facebook-f"></i></a>
-            <a href="#" className={styles.socialIcon}><i className="fa-brands fa-whatsapp"></i></a>
-            <a href="#" className={styles.socialIcon}><i className="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61593467009034" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><i className="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/9779856082230" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><i className="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
 
