@@ -8,7 +8,7 @@ const BulletinSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalContentRef = useRef<HTMLDivElement>(null);
 
-  const pdfUrl = "https://gamapokhara.org.np/wp-content/uploads/2026/08/CamScanner-18-8-2026-15.23.pdf";
+  const pdfUrl = "/karekram.pdf";
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -86,7 +86,7 @@ const BulletinSection = () => {
               <div className={styles.gamaPreviewGlow}></div>
               <div className={styles.gamaDocument}>
                 <Image
-                  src="https://gamapokhara.org.np/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-19-at-12.17.46-PM.jpeg"
+                  src="/landing/image copy 5.png"
                   alt="२०८२ सालका काम तथा कार्यक्रमहरू"
                   width={430}
                   height={360}

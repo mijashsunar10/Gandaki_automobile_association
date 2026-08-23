@@ -78,9 +78,9 @@ const ProgramsSection: React.FC<ProgramsSectionProps> = ({ isHomepage = false })
 
           {isHomepage && (
             <div className={styles.viewAllContainer}>
-              <Link href="/programs" className={styles.viewAllButton}>
+              <a href="/karekram.pdf" target="_blank" rel="noopener noreferrer" className={styles.viewAllButton}>
                 सबै कार्यक्रमहरू हेर्नुहोस् <i className="fa-solid fa-arrow-right"></i>
-              </Link>
+              </a>
             </div>
           )}
 
