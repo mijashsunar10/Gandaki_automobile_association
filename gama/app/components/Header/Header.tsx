@@ -43,7 +43,7 @@ const Header = () => {
               <Phone size={20} className={styles.contactIcon} strokeWidth={2} />
               <div className={styles.contactText}>
                 <span className={styles.contactLabel}>Call Us</span>
-                <span className={styles.contactValue}>061-577232</span>
+                <span className={styles.contactValue}>०६१-५७७२३२, ९८५६०८२२३०</span>
               </div>
             </div>
 
@@ -85,7 +85,7 @@ const Header = () => {
             <li className={styles.navItem}><Link href="/certificate" className={styles.navLink}>दर्ता भएको प्रमाण पत्र</Link></li>
           </ul>
 
-          <button className={styles.ctaButton}>GET STARTED</button>
+          <Link href="/contact" className={styles.ctaButton}>सम्पर्क गर्नुहोस्</Link>
 
           <button
             className={styles.mobileMenuBtn}

@@ -4,6 +4,7 @@ import AboutSection from "./components/AboutSection/AboutSection";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 import ChairmanSection from "./components/ChairmanSection/ChairmanSection";
 import BulletinSection from "./components/BulletinSection/BulletinSection";
+import ContactSection from "./components/ContactSection/ContactSection";
 import MembersSection from "./components/MembersSection/MembersSection";
 import ProgramsSection from "./components/ProgramsSection/ProgramsSection";
 
@@ -18,7 +19,7 @@ export default function Home() {
       <BulletinSection />
       <MembersSection isHomepage={true} />
       <ProgramsSection isHomepage={true} />
-     
+      <ContactSection />
     </>
   );
 }
