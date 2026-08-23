@@ -46,8 +46,8 @@ export default function AboutPage() {
 
             {/* Right: Images */}
             <div className={styles.imageGrid}>
-              <Image src="/landing/image copy 3.png" alt="GAMA Event" width={500} height={400} className={styles.gridImage} />
-              <Image src="/landing/image copy 5.png" alt="GAMA Training" width={500} height={400} className={styles.gridImage} />
+              <Image src="/landing/image copy 3.webp" alt="GAMA Event" width={500} height={400} className={styles.gridImage} />
+              <Image src="/landing/image copy 5.webp" alt="GAMA Training" width={500} height={400} className={styles.gridImage} />
             </div>
           </div>
 

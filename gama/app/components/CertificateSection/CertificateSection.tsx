@@ -8,22 +8,22 @@ const certificates = [
   {
     id: 1,
     title: 'संस्था दर्ता प्रमाणपत्र',
-    image: '/landing/image copy 5.png',
+    image: '/dartavayekoprmadpatra.webp',
   },
   {
     id: 2,
     title: 'प्यान (PAN) दर्ता प्रमाणपत्र',
-    image: '/landing/image copy 5.png',
+    image: '/dartavayekoprmadpatra.webp',
   },
   {
     id: 3,
     title: 'नवीकरण प्रमाणपत्र',
-    image: '/landing/image copy 5.png',
+    image: '/dartavayekoprmadpatra.webp',
   },
   {
     id: 4,
     title: 'आबद्धता प्रमाणपत्र',
-    image: '/landing/image copy 5.png',
+    image: '/dartavayekoprmadpatra.webp',
   }
 ];
 

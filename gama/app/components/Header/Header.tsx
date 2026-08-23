@@ -17,7 +17,7 @@ const Header = () => {
           
           <Link href="/" className={styles.logoSection}>
             <Image
-              src="/logo/image.png"
+              src="/logo/image.webp"
               alt="GAMA Logo"
               width={75}
               height={75}

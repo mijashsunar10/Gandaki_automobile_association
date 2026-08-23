@@ -7,7 +7,7 @@ import styles from './PartnersSection.module.css';
 const partnersData = Array.from({ length: 7 }, (_, i) => ({
   id: i + 1,
   title: `साझेदार ${i + 1}`,
-  image: '/landing/freinds.png',
+  image: '/landing/freinds.webp',
 }));
 
 const PartnersSection = () => {

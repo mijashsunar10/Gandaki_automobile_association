@@ -19,7 +19,7 @@ const Footer = () => {
             <Link href="/" className={styles.logoWrapper}>
               <div className={styles.logoBg}>
                 <Image 
-                  src="/logo/image.png" 
+                  src="/logo/image.webp" 
                   alt="GAMA Logo" 
                   width={60} 
                   height={60} 

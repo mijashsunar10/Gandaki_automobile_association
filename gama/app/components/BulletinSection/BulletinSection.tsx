@@ -86,7 +86,7 @@ const BulletinSection = () => {
               <div className={styles.gamaPreviewGlow}></div>
               <div className={styles.gamaDocument}>
                 <Image
-                  src="/landing/image copy 5.png"
+                  src="/landing/image copy 5.webp"
                   alt="२०८२ सालका काम तथा कार्यक्रमहरू"
                   width={430}
                   height={360}

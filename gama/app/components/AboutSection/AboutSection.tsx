@@ -12,21 +12,21 @@ const AboutSection = () => {
         {/* Left Side: Image Collage */}
         <div className={styles.collage}>
           <Image 
-            src="/landing/image copy 4.png" 
+            src="/landing/image copy 4.webp" 
             alt="GAMA Event" 
             width={600} 
             height={400} 
             className={styles.image1} 
           />
           <Image 
-            src="/landing/image copy 6.png" 
+            src="/landing/image copy 6.webp" 
             alt="GAMA Team" 
             width={400} 
             height={300} 
             className={styles.image2} 
           />
           <Image 
-            src="/landing/image.png" 
+            src="/landing/image.webp" 
             alt="GAMA Activity" 
             width={300} 
             height={300} 

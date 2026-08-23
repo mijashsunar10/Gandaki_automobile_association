@@ -5,11 +5,11 @@ import { ArrowRight } from "lucide-react";
 import styles from "./Hero.module.css";
 
 const GAMA_IMAGES = [
-  "/landing/image.png",
-  "/landing/image copy.png",
-  "/landing/image copy 3.png",
-  "/landing/image copy 4.png",
-  "/landing/image copy 6.png"
+  "/landing/image.webp",
+  "/landing/image copy.webp",
+  "/landing/image copy 3.webp",
+  "/landing/image copy 4.webp",
+  "/landing/image copy 6.webp"
 ];
 
 const GAMA_DURATION = 6000;
