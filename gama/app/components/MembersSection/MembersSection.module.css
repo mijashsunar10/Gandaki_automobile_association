@@ -250,7 +250,7 @@
   width: 205px;
   height: 205px;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   border-radius: 50%;
   border: 7px solid rgba(255, 255, 255, .95);
   box-shadow: 0 20px 45px rgba(0, 0, 0, .35);

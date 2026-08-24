@@ -64,7 +64,7 @@ const MembersSection: React.FC<MembersSectionProps> = ({ isHomepage = false }) =
   ];
 
   // If on homepage, show 4 grid members without the large president block
-  const displayExecutives = executiveMembers;
+  const displayExecutives = isHomepage ? executiveMembers.slice(0, 4) : executiveMembers;
 
   return (
     <>
