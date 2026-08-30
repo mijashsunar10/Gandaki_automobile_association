@@ -11,6 +11,13 @@ const BulletinSection = () => {
   const pdfUrl = "/karekram.pdf";
 
   const openModal = () => {
+    // Mobile browsers (iOS/Android) often cannot render PDFs inside an iframe,
+    // resulting in a blank white screen. We open it in a new tab instead for small screens.
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      window.open(pdfUrl, '_blank');
+      return;
+    }
+    
     setIsModalOpen(true);
     document.body.style.overflow = "hidden";
   };
