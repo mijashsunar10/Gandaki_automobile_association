@@ -282,6 +282,29 @@
   color: white;
 }
 
+.creditBar {
+  background: #1e40af;
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.creditBar p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.creditBar a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.creditBar a:hover {
+  color: #dbeafe;
+}
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .container {

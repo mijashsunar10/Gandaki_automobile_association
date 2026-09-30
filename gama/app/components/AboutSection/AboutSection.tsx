@@ -79,8 +79,14 @@ const AboutSection = () => {
             </Link>
             
             <div className={styles.profile}>
-              <div className={styles.profileIconBox}>
-                <User size={32} color="#fff" />
+              <div className={styles.profileIconBox} style={{ overflow: 'hidden', padding: 0 }}>
+                <Image
+                  src="/karesamitisadashe/Screenshot from 2026-09-10 13-11-47.png"
+                  alt="विष्णु प्रसाद अधिकारी"
+                  width={50}
+                  height={50}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%' }}
+                />
               </div>
               <div className={styles.profileText}>
                 <h4 className={styles.profileName}>विष्णु प्रसाद अधिकारी</h4>

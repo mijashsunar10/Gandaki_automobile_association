@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pabsonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#72a8dc" />
+      <stop offset="100%" stop-color="#558ec7" />
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#12355c" />
+      <stop offset="100%" stop-color="#0c2440" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="url(#pabsonBg)" />
+
+  <!-- Head / Hair Silhouette -->
+  <path d="M200 95 C175 95 162 115 162 145 C162 165 170 185 182 196 C186 215 192 225 200 225 C208 225 214 215 218 196 C230 185 238 165 238 145 C238 115 225 95 200 95 Z" fill="url(#suitGrad)" />
+  
+  <!-- Neck -->
+  <path d="M186 195 L214 195 L218 245 L182 245 Z" fill="#12355c" />
+
+  <!-- White Shirt Collar & V-neck -->
+  <polygon points="200,285 178,225 200,238 222,225" fill="#ffffff" />
+  <polygon points="200,285 192,233 208,233" fill="#e2e8f0" />
+
+  <!-- Tie -->
+  <polygon points="196,242 204,242 206,310 200,325 194,310" fill="url(#suitGrad)" />
+  <!-- Tie Knot -->
+  <polygon points="195,236 205,236 203,245 197,245" fill="#0c2440" />
+
+  <!-- Suit Jacket / Torso Silhouette -->
+  <!-- Left Shoulder & Body -->
+  <path d="M178 228 C150 236 100 265 85 305 C75 330 68 395 62 500 L188 500 L188 340 L174 275 Z" fill="url(#suitGrad)" />
+  <!-- Right Shoulder & Body -->
+  <path d="M222 228 C250 236 300 265 315 305 C325 330 332 395 338 500 L212 500 L212 340 L226 275 Z" fill="#0d2948" />
+  
+  <!-- Center Jacket Lapels -->
+  <path d="M174 230 L195 330 L188 500 L212 500 L205 330 L226 230 L215 238 L200 315 L185 238 Z" fill="#0d2948" />
+
+  <!-- Lapel Left -->
+  <polygon points="174,230 188,278 168,284 196,338 186,338 152,270" fill="#12355c" />
+  <!-- Lapel Right -->
+  <polygon points="226,230 212,278 232,284 204,338 214,338 248,270" fill="#12355c" />
+
+  <!-- Suit Pocket Details -->
+  <rect x="135" y="340" width="30" height="3" rx="1.5" fill="#0c2440" opacity="0.6" />
+  <rect x="235" y="340" width="30" height="3" rx="1.5" fill="#0c2440" opacity="0.6" />
+
+  <!-- Bottom Text Label (Same as PABSON's "SCHOOL COMMITTEE MEMBER") -->
+  <text x="200" y="465" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700" letter-spacing="2.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" opacity="0.92">
+    कार्यसमिति सदस्य
+  </text>
+</svg>

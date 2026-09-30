@@ -4,10 +4,16 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './PartnersSection.module.css';
 
-const partnersData = Array.from({ length: 7 }, (_, i) => ({
+const baseImages = [
+  '/freinds/friend.png',
+  '/freinds/image.png',
+  '/freinds/whatsapp_image.jpeg'
+];
+
+const partnersData = Array.from({ length: 6 }, (_, i) => ({
   id: i + 1,
   title: `साझेदार ${i + 1}`,
-  image: '/landing/freinds.webp',
+  image: baseImages[i % 3],
 }));
 
 const PartnersSection = () => {

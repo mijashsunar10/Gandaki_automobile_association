@@ -22,7 +22,7 @@ export default function ChairmanMessagePage() {
               <div className={styles.chairmanImageWrap}>
                 <div className={styles.imageAccent}></div>
                 <Image
-                  src="https://gamapokhara.org.np/wp-content/uploads/2026/08/businessman-with-smiling-face-vector_1190219-37918.avif"
+                  src="/karesamitisadashe/Screenshot from 2026-09-10 13-11-47.png"
                   alt="अध्यक्ष - विष्णु प्रसाद अधिकारी"
                   width={280}
                   height={350}

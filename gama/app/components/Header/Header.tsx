@@ -90,6 +90,7 @@ const Header = () => {
               </ul>
             </li>
             <li className={styles.navItem}><Link href="/certificate" className={styles.navLink}>दर्ता भएको प्रमाण पत्र</Link></li>
+            <li className={styles.navItem}><Link href="/calendar" className={styles.navLink}>क्यालेन्डर</Link></li>
           </ul>
 
           <Link href="/contact" className={styles.ctaButton}>सम्पर्क गर्नुहोस्</Link>
@@ -124,6 +125,7 @@ const Header = () => {
           <li className={pathname === '/programs' || pathname === '/programs/' ? styles.mobileActiveItem : ''}><Link href="/programs" onClick={() => setIsMobileMenuOpen(false)}>कार्यक्रमहरु</Link></li>
           <li className={pathname === '/chairman-message' || pathname === '/chairman-message/' ? styles.mobileActiveItem : ''}><Link href="/chairman-message" onClick={() => setIsMobileMenuOpen(false)}>अध्यक्षको सन्देश</Link></li>
           <li className={pathname === '/certificate' || pathname === '/certificate/' ? styles.mobileActiveItem : ''}><Link href="/certificate" onClick={() => setIsMobileMenuOpen(false)}>दर्ता भएको प्रमाण पत्र</Link></li>
+          <li className={pathname === '/calendar' || pathname === '/calendar/' ? styles.mobileActiveItem : ''}><Link href="/calendar" onClick={() => setIsMobileMenuOpen(false)}>क्यालेन्डर</Link></li>
           <li className={pathname === '/contact' || pathname === '/contact/' ? styles.mobileActiveItem : ''}><Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>सम्पर्क गर्नुहोस्</Link></li>
         </ul>
 

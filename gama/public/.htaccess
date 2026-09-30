@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Directory Index
+  DirectoryIndex index.html
+
+  # Error Document
+  ErrorDocument 404 /404.html
+</IfModule>

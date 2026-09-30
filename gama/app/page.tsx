@@ -4,6 +4,7 @@ import AboutSection from "./components/AboutSection/AboutSection";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 import ChairmanSection from "./components/ChairmanSection/ChairmanSection";
 import BulletinSection from "./components/BulletinSection/BulletinSection";
+import CalendarSection from "./components/CalendarSection/CalendarSection";
 import ContactSection from "./components/ContactSection/ContactSection";
 import MembersSection from "./components/MembersSection/MembersSection";
 import ProgramsSection from "./components/ProgramsSection/ProgramsSection";
@@ -17,6 +18,7 @@ export default function Home() {
        <ServicesSection />
       <ChairmanSection />
       <BulletinSection />
+      <CalendarSection isHomepage={true} />
       <MembersSection isHomepage={true} />
       <ProgramsSection isHomepage={true} />
       <ContactSection />

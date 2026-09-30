@@ -49,6 +49,7 @@ const Footer = () => {
               <li><Link href="/programs"><i className="fa-solid fa-chevron-right"></i> कार्यक्रमहरू</Link></li>
               <li><Link href="/members"><i className="fa-solid fa-chevron-right"></i> कार्यसमिति सदस्यहरू</Link></li>
               <li><Link href="/certificate"><i className="fa-solid fa-chevron-right"></i> दर्ता प्रमाणपत्र</Link></li>
+              <li><Link href="/calendar"><i className="fa-solid fa-chevron-right"></i> क्यालेन्डर २०८३</Link></li>
             </ul>
           </div>
 
@@ -114,6 +115,19 @@ const Footer = () => {
             <Link href="#">नियम तथा सर्तहरू</Link>
           </div>
         </div>
+      </div>
+
+      <div className={styles.creditBar}>
+        <p>
+          Designed and Developed by{' '}
+          <a
+            href="https://nitiacademy.edu.np/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Niti Academy
+          </a>
+        </p>
       </div>
     </footer>
   );

@@ -105,6 +105,20 @@
   line-height: 1.8;
 }
 
+.accentDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 22px auto 0;
+}
+
+.accentBar {
+  width: 52px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #184275 50%, #e53935 50%);
+}
+
 /* =========================================================
    TABS WRAPPER
 ========================================================= */
@@ -112,6 +126,9 @@
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .gamaTabs {
@@ -222,38 +239,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 35px;
   overflow: hidden;
 }
 
 .gamaPresidentImage::before {
   content: "";
   position: absolute;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  border-radius: 20px;
   background: radial-gradient(circle, rgba(18, 97, 168, .28), transparent 70%);
 }
 
 .gamaImageRing {
   position: absolute;
-  width: 245px;
-  height: 245px;
-  border-radius: 50%;
+  width: 250px;
+  height: 295px;
+  border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, .15);
-  box-shadow: 0 0 0 15px rgba(255, 255, 255, .025), 0 0 0 30px rgba(18, 97, 168, .04);
+  box-shadow: 0 0 0 12px rgba(255, 255, 255, .025), 0 0 0 24px rgba(18, 97, 168, .04);
 }
 
 .presidentImg {
   position: relative;
   z-index: 2;
-  width: 205px;
-  height: 205px;
+  width: 230px;
+  height: 280px;
   object-fit: cover;
   object-position: center top;
-  border-radius: 50%;
-  border: 7px solid rgba(255, 255, 255, .95);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+  border-radius: 16px;
+  border: 4px solid rgba(255, 255, 255, .95);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .4);
 }
 
 /* BADGE */
@@ -346,63 +363,53 @@
 .gamaMembersGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 24px;
 }
 
 /* =========================================================
-   MEMBER CARD
+   MEMBER CARD (PABSON STYLE)
 ========================================================= */
 .gamaMemberCard {
   position: relative;
   overflow: hidden;
-  border: 1px solid #e3eaf0;
+  border: 1px solid #e2eaf1;
   border-radius: 16px;
   background: #ffffff;
-  box-shadow: 0 10px 30px rgba(7, 21, 34, .06);
-  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  box-shadow: 0 6px 22px rgba(7, 21, 34, 0.05);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .gamaMemberCard:hover {
-  transform: translateY(-8px);
-  border-color: rgba(18, 97, 168, .25);
-  box-shadow: 0 20px 45px rgba(7, 21, 34, .12);
+  transform: translateY(-6px);
+  border-color: rgba(18, 97, 168, 0.28);
+  box-shadow: 0 16px 36px rgba(18, 97, 168, 0.12);
 }
 
 /* =========================================================
-   MEMBER IMAGE
+   MEMBER IMAGE - FULL RECTANGULAR PORTRAIT
 ========================================================= */
 .gamaMemberImage {
   position: relative;
-  height: 260px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 4.9;
+  min-height: 270px;
   overflow: hidden;
-  background: linear-gradient(145deg, #f5f9fc, #e9f1f7);
-}
-
-.gamaMemberImage::before {
-  content: "";
-  position: absolute;
-  width: 210px;
-  height: 210px;
-  top: 35px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(7, 21, 34, .08);
+  background: #649fd7;
 }
 
 .memberImg {
-  position: relative;
-  z-index: 2;
-  width: 205px;
-  height: 205px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 50%;
-  border: 5px solid #ffffff;
-  box-shadow: 0 10px 25px rgba(7, 21, 34, .15);
-  transition: transform .4s ease;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: transform 0.45s ease;
 }
 
 .gamaMemberCard:hover .memberImg {
@@ -410,56 +417,75 @@
 }
 
 /* =========================================================
-   NUMBER
+   NUMBER (OPTIONAL SUBTLE BADGE)
 ========================================================= */
 .gamaMemberNumber {
   position: absolute;
   z-index: 5;
-  top: 14px;
-  left: 14px;
+  top: 12px;
+  left: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #ffffff;
-  color: var(--blue);
-  font-size: 9px;
-  font-weight: 900;
-  box-shadow: 0 5px 15px rgba(7, 21, 34, .10);
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(4px);
+  color: #123e6b;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(7, 21, 34, 0.12);
 }
 
 /* =========================================================
    MEMBER INFO
 ========================================================= */
 .gamaMemberInfo {
-  padding: 22px 22px 25px;
+  padding: 20px 16px 24px;
   text-align: center;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
 }
 
-.gamaMemberInfo span {
-  display: inline-block;
-  margin-bottom: 6px;
-  color: var(--red);
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 1.5px;
-}
-
+.memberName,
 .gamaMemberInfo h3 {
-  margin: 0;
-  color: var(--dark);
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 1.3;
+  margin: 0 0 6px 0;
+  color: #113460;
+  font-size: 17.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
 }
 
+.memberRole,
+.gamaMemberInfo span {
+  display: block;
+  margin: 0;
+  color: #e53935;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+.memberPhone,
 .gamaMemberInfo p {
-  margin: 7px 0 0;
-  color: #8a98a3;
-  font-size: 10px;
+  margin: 6px 0 0 0;
+  color: #4b5d6e;
+  font-size: 13px;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.memberPhone i {
+  color: #1a4478;
+  font-size: 11px;
 }
 
 /* =========================================================
@@ -495,33 +521,37 @@
 }
 
 /* =========================================================
-   VIEW ALL BUTTON (For Homepage)
+   VIEW ALL BUTTON (For Homepage - PABSON PILL OUTLINE)
 ========================================================= */
 .viewAllContainer {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 45px;
 }
 
 .viewAllButton {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 28px;
-  background: linear-gradient(110deg, var(--blue), var(--blue-light));
-  color: #ffffff;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 38px;
+  background: transparent;
+  color: #1a4478;
+  border: 2px solid #1a4478;
+  border-radius: 50px;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 800;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(18, 97, 168, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 14px rgba(26, 68, 120, 0.06);
+  transition: all 0.3s ease;
 }
 
 .viewAllButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(18, 97, 168, 0.35);
-  color: white;
+  background: #1a4478;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26, 68, 120, 0.25);
 }
 
 /* =========================================================
@@ -573,17 +603,17 @@
   .gamaTab i { font-size: 11px; }
   .gamaTab span { white-space: nowrap; }
   .gamaPresident { border-radius: 16px; margin-bottom: 35px; }
-  .gamaPresidentImage { min-height: 300px; padding: 30px; }
-  .gamaImageRing { width: 220px; height: 220px; }
-  .presidentImg { width: 180px; height: 180px; }
-  .gamaPresidentBadge { bottom: 20px; }
+  .gamaPresidentImage { min-height: 280px; padding: 25px; }
+  .gamaImageRing { width: 215px; height: 260px; border-radius: 14px; }
+  .presidentImg { width: 200px; height: 250px; border-radius: 14px; }
+  .gamaPresidentBadge { bottom: 15px; }
   .gamaPresidentInfo { padding: 35px 25px 40px; }
   .gamaPresidentInfo h2 { font-size: 40px; }
   .gamaPresidentInfo p { font-size: 12px; }
   .gamaProfileMeta { flex-direction: column; gap: 10px; align-items: center; }
-  .gamaMembersGrid { grid-template-columns: 1fr; gap: 18px; }
-  .gamaMemberImage { height: 280px; }
-  .memberImg { width: 215px; height: 215px; }
+  .gamaMembersGrid { grid-template-columns: 1fr; gap: 20px; }
+  .gamaMemberImage { aspect-ratio: 4 / 4.9; min-height: 280px; }
+  .memberImg { width: 100% !important; height: 100% !important; }
   .gamaPanelHeading h2 { font-size: 24px; }
 }
 
@@ -594,4 +624,771 @@
   .gamaMembersHeader h1 { font-size: 34px; }
   .gamaTab { padding: 10px 12px; }
   .gamaTab span { font-size: 9px; }
+}
+
+/* =========================================================
+   PRESIDENTS SECTION & PDF SHOWCASE
+========================================================= */
+.pdfShowcaseCard {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e1e8ee;
+  box-shadow: 0 15px 35px rgba(7, 21, 34, 0.06);
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pdfCoverWrapper {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  background: #f1f5f9;
+  aspect-ratio: 500 / 700;
+  border: 2px solid #e2e8f0;
+}
+
+.pdfCoverBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 5;
+  background: var(--red);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(229, 57, 53, 0.35);
+}
+
+.pdfCoverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pdfCoverWrapper:hover .pdfCoverImg {
+  transform: scale(1.03);
+}
+
+.pdfCoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 21, 34, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.pdfCoverWrapper:hover .pdfCoverOverlay {
+  opacity: 1;
+}
+
+.pdfCoverOverlay i {
+  font-size: 2rem;
+}
+
+.pdfDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdfDocTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.pdfTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.3;
+  margin: 0 0 1rem 0;
+}
+
+.pdfTitle strong {
+  color: var(--blue);
+}
+
+.pdfDesc {
+  font-size: 0.98rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+}
+
+.pdfFeaturesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.pdfFeatureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.pdfFeatureItem i {
+  color: #10b981;
+  margin-top: 0.2rem;
+  font-size: 0.95rem;
+}
+
+.pdfActionButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.btnPdfPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(110deg, var(--blue), var(--blue-light));
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(18, 97, 168, 0.28);
+  transition: all 0.2s ease;
+}
+
+.btnPdfPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(18, 97, 168, 0.4);
+}
+
+.btnPdfSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--red);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(229, 57, 53, 0.28);
+  transition: all 0.2s ease;
+}
+
+.btnPdfSecondary:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(229, 57, 53, 0.4);
+}
+
+.btnPdfOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btnPdfOutline:hover {
+  background: #f8fafc;
+  color: var(--dark);
+  border-color: #94a3b8;
+}
+
+/* --- 11 Pages Gallery Grid --- */
+.pagesGallerySection {
+  margin-top: 2.5rem;
+}
+
+.galleryHeader {
+  margin-bottom: 1.5rem;
+}
+
+.galleryHeader h4 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 0 0 0.35rem 0;
+}
+
+.galleryHeader p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.pagesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.pageGridCard {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageGridCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(7, 21, 34, 0.1);
+  border-color: #cbd5e1;
+}
+
+.pageGridImgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 500 / 700;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.pageGridImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pageGridCard:hover .pageGridImg {
+  transform: scale(1.04);
+}
+
+.pageGridOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 21, 34, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  backdrop-filter: blur(2px);
+}
+
+.pageGridCard:hover .pageGridOverlay {
+  opacity: 1;
+}
+
+.pageNumberBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--blue);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.pageGridMeta {
+  padding: 0.9rem 1rem;
+  background: #ffffff;
+}
+
+.pageGridMeta h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 0.25rem 0;
+  line-height: 1.35;
+}
+
+.pageGridMeta p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --- Homepage Presidents Banner --- */
+.hpPresidentsBanner {
+  background: linear-gradient(135deg, #0f2454 0%, #1e3a8a 100%);
+  border-radius: 18px;
+  padding: 2.2rem 2.5rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 15px 35px rgba(18, 97, 168, 0.22);
+}
+
+.hpPresidentsContent {
+  max-width: 650px;
+}
+
+.hpPresidentsTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #fef08a;
+}
+
+.hpPresidentsContent h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.hpPresidentsContent p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.hpPresidentsActions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.hpPdfOpenBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--red);
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(229, 57, 53, 0.35);
+  transition: all 0.2s ease;
+}
+
+.hpPdfOpenBtn:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.hpPdfExploreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  padding: 0.85rem 1.3rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.hpPdfExploreBtn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* =========================================================
+   FULLSCREEN PDF MODAL
+========================================================= */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 21, 34, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: modalFadeIn 0.25s ease;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalContainer {
+  width: 100%;
+  max-width: 1050px;
+  height: 94vh;
+  background: #0b1727;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #112239;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.modalTitleBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+}
+
+.modalTitleBlock i {
+  color: var(--red);
+  font-size: 1.6rem;
+}
+
+.modalTitleBlock h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.modalTitleBlock span {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  display: block;
+}
+
+.modalViewSwitcher {
+  display: flex;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.25rem;
+  border-radius: 8px;
+  gap: 0.25rem;
+}
+
+.modalSwitchBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: transparent;
+  color: #cbd5e1;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modalSwitchBtn:hover {
+  color: #ffffff;
+}
+
+.switchActive {
+  background: var(--blue) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(18, 97, 168, 0.4);
+}
+
+.modalActions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.modalDownloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--red);
+  color: #ffffff;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.modalDownloadBtn:hover {
+  background: var(--red-dark);
+}
+
+.modalNewTabBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.modalNewTabBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modalCloseBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modalCloseBtn:hover {
+  background: var(--red);
+}
+
+.modalBody {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: #07111c;
+}
+
+.pdfIframeWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.pdfIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.pageViewerWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+}
+
+.pageViewerCenter {
+  height: 100%;
+  max-height: calc(94vh - 140px);
+  aspect-ratio: 500 / 700;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageViewerImg {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pageNavBtn {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.pageNavBtn:hover {
+  background: var(--blue);
+  transform: scale(1.1);
+}
+
+.pageNavBtnLeft {
+  margin-right: 0.5rem;
+}
+
+.pageNavBtnRight {
+  margin-left: 0.5rem;
+}
+
+.modalFooter {
+  background: #112239;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+}
+
+.pageThumbnailsScroll {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  justify-content: center;
+  padding-bottom: 0.2rem;
+}
+
+.pageThumbBtn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.pageThumbBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.thumbActive {
+  background: var(--red) !important;
+  color: #ffffff !important;
+  border-color: var(--red) !important;
+}
+
+/* --- Responsive Adjustments for Presidents Section --- */
+@media(max-width: 1024px) {
+  .pdfShowcaseCard {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+  .pdfCoverWrapper {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .pagesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hpPresidentsBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  .hpPresidentsActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hpPdfOpenBtn, .hpPdfExploreBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media(max-width: 768px) {
+  .pagesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .modalHeader {
+    padding: 0.75rem;
+  }
+  .modalTitleBlock span {
+    display: none;
+  }
+}
+
+@media(max-width: 480px) {
+  .pagesGrid {
+    grid-template-columns: 1fr;
+  }
+  .pdfTitle {
+    font-size: 1.5rem;
+  }
+  .pdfActionButtons {
+    flex-direction: column;
+  }
+  .btnPdfPrimary, .btnPdfSecondary, .btnPdfOutline {
+    width: 100%;
+    justify-content: center;
+  }
+  .pageNavBtn {
+    width: 38px;
+    height: 38px;
+  }
 }

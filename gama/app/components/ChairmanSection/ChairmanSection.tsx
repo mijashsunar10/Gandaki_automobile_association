@@ -11,7 +11,7 @@ const ChairmanSection = () => {
         <div className={styles.homeChairmanImage}>
           <div className={styles.homeChairmanAccent}></div>
           <Image
-            src="/person.png"
+            src="/karesamitisadashe/Screenshot from 2026-09-10 13-11-47.png"
             alt="अध्यक्ष - विष्णु प्रसाद अधिकारी"
             width={330}
             height={400}
